@@ -1,0 +1,33 @@
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation "com.google.android.material:material:${versions.material}"
+
+    implementation "androidx.fragment:fragment-ktx:${versions.coreKtx}"
+    implementation "androidx.core:core-ktx:${versions.coreKtx}"
+
+    implementation "io.coil-kt:coil:${versions.coil}"
+
+    implementation "com.squareup.retrofit2:converter-gson:${versions.retrofit}"
+
+    kapt "com.google.dagger:dagger-compiler:${versions.dagger}"
+    kapt "com.google.dagger:dagger-android-processor:${versions.dagger}"
+    implementation "com.google.dagger:dagger:${versions.dagger}"
+    implementation "com.google.dagger:dagger-android:${versions.dagger}"
+    implementation "com.google.dagger:dagger-android-support:${versions.dagger}"
+
+    implementation "io.reactivex.rxjava2:rxkotlin:${versions.rxkotlin}"
+    implementation "io.reactivex.rxjava2:rxandroid:${versions.rxandroid}"
+
+    testImplementation "androidx.arch.core:core-testing:2.1.0"
+    testImplementation "org.mockito:mockito-core:2.24.5"
+    testImplementation "org.mockito:mockito-inline:2.24.5"
+    testImplementation("com.nhaarman:mockito-kotlin-kt1.1:1.5.0") {
+        exclude module: 'kotlin-stdlib'
+        exclude module: 'kotlin-reflect'
+    }
+
+    implementation "com.jakewharton.timber:timber:${versions.timber}"
+
+    debugImplementation "com.squareup.leakcanary:leakcanary-android:${versions.leakcanary}"
+    implementation "com.squareup.leakcanary:leakcanary-object-watcher-android:${versions.leakcanary}"
+}
